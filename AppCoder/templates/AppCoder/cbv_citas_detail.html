@@ -1,0 +1,14 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% block ContenidoVariable %}
+<h4>Este es el contenido de Citas!</h4>
+
+{{ nombre }}
+<h1> Detalle de las citas </h1>
+
+{{cita.cita}} - fecha_tomada: {{ cita.fecha_tomada }} ?
+
+<a href="{% url 'citas-list' %}">Regresar</a>
+
+{% endblock ContenidoVariable%}

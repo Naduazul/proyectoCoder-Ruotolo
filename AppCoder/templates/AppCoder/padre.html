@@ -1,0 +1,200 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Proyecto Coder - Citas Online</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="static/assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="{% static 'AppCoder/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'AppCoder/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'AppCoder/css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'AppCoder/css/owl.theme.default.min.css' %}">
+        <link rel="stylesheet" href="{% static 'AppCoder/css/templatemo-style.css' %}">
+        
+
+    </head>
+    
+    <body>
+        <!-- Navigation -->
+
+        <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+            <div class="container">
+  
+                 <div class="navbar-header">
+                      <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                           <span class="icon icon-bar"></span>
+                           <span class="icon icon-bar"></span>
+                           <span class="icon icon-bar"></span>
+                      </button>
+  
+                      <!-- lOGO TEXT HERE -->
+                      <a href="#" class="navbar-brand">Turnos Web</a>
+                 </div>
+  
+                 <!-- MENU LINKS -->
+                 <div class="collapse navbar-collapse">
+                      <ul class="nav navbar-nav navbar-nav-first">
+                           <li><a href="/AppCoder/inicio/" class="smoothScroll">Inicio</a></li>
+                           <li><a href="/AppCoder/profesionales/" class="smoothScroll">Profesionales</a></li>
+                           <li><a href="/AppCoder/citas-lista/" class="smoothScroll">Todas las Citas</a></li>
+                           <li><a href=/AppCoder/profesionales-lista/ class="smoothScroll">Todos los Profesionales</a></li>
+                           <li><a href="/AppCoder/citas/"class="smoothScroll">Citas</a></li>
+                           <li><a href="{% url 'citas-list' %}" class="smoothScroll">Lista de Citas</a></li>
+                      </ul>
+  
+                      <ul class="nav navbar-nav navbar-right">
+                           <li><a href="#"><i class="fa fa-phone"></i> +65 2244 1100</a></li>
+                      </ul>
+                 </div>
+  
+            </div>
+       </section>
+
+
+
+
+        
+        <header>
+           
+
+        <section id="home">
+            <div class="row">
+  
+                      <div class="owl-carousel owl-theme home-slider">
+                           <div class="item item-first">
+                                <div class="caption">
+                                     <div class="container">
+                                          <div class="col-md-6 col-sm-12">
+                                               <h1>Citas con Profesionales</h1>
+                                               <h3>Tome turnos online, de forma facil y sencilla, con un solo click</h3>
+                                               <a href="#feature" class="section-btn btn btn-default smoothScroll">Mas..</a>
+                                          </div>
+                                     </div>
+                                </div>
+                           </div>
+  
+                           <div class="item item-second">
+                                <div class="caption">
+                                     <div class="container">
+                                          <div class="col-md-6 col-sm-12">
+                                               <h1>Conece un poco mas..</h1>
+                                               <h3>Elige las especialidades, y conoce los profesionales que te estan esperando para atender. Contamos con expertos de primer nivel</h3>
+                                               <a href="#courses" class="section-btn btn btn-default smoothScroll">Toma un turno</a>
+                                          </div>
+                                     </div>
+                                </div>
+                           </div>
+  
+                           <div class="item item-third">
+                                <div class="caption">
+                                     <div class="container">
+                                          <div class="col-md-6 col-sm-12">
+                                               <h1></h1>
+                                               <h3>Visita nuestras redes, seguinos por facebook<a rel="nofollow" href="https://www.facebook.com//italianolaplata/">Facebook</a></h3>
+                                               <a href="#contact" class="section-btn btn btn-default smoothScroll">Charla con Nosotros</a>
+                                          </div>
+                                     </div>
+                                </div>
+                           </div>
+                      </div>
+            </div>
+       </section>
+    </header>
+        
+        {% block ContenidoVariable %}
+        {% endblock ContenidoVariable %}
+
+      
+        <!-- FOOTER -->
+     <footer id="footer">
+          <div class="container">
+               <div class="row">
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Nosotros</h2>
+                              </div>
+                              <address>
+                                   <p>Pasaje 49<br> CABA</p>
+                              </address>
+
+                              <ul class="social-icon">
+                                   <li><a href="#" class="fa fa-facebook-square" attr="facebook icon"></a></li>
+                                   <li><a href="#" class="fa fa-twitter"></a></li>
+                                   <li><a href="#" class="fa fa-instagram"></a></li>
+                              </ul>
+
+                              <div class="copyright-text"> 
+                                   <p>Copyright &copy; 2019 Ruotolo Oscar</p>
+                                   
+                                   <p>Design: Proyecto Coder</p>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-6">
+                         <div class="footer-info">
+                              <div class="section-title">
+                                   <h2>Contacto</h2>
+                              </div>
+                              <address>
+                                   <p>+65 2244 1100, +66 1800 1100</p>
+                                   <p><a href="mailto:youremail.co">hello@youremail.co</a></p>
+                              </address>
+
+                              <div class="footer_menu">
+                                   <h2>Links</h2>
+                                   <ul>
+                                        <li><a href="#">Vision</a></li>
+                                        <li><a href="#">Mision</a></li>
+                                        <li><a href="#">Terminos y condiciones</a></li>
+                                        <li><a href="#">Politica de Privacidad</a></li>
+                                   </ul>
+                              </div>
+                         </div>
+                    </div>
+
+                    <div class="col-md-4 col-sm-12">
+                         <div class="footer-info newsletter-form">
+                              <div class="section-title">
+                                   <h2>Suscribase</h2>
+                              </div>
+                              <div>
+                                   <div class="form-group">
+                                        <form action="#" method="get">
+                                             <input type="email" class="form-control" placeholder="Ingrese su mail" name="email" id="email" required="">
+                                             <input type="submit" class="form-control" name="submit" id="form-submit" value="Enviar">
+                                        </form>
+                                        <span><sup>*</sup> Tenga en cuenta que no enviamos spam a su correo electrónico.</span>
+                                   </div>
+                              </div>
+                         </div>
+                    </div>
+                    
+               </div>
+          </div>
+     </footer>
+      
+
+        <script src="{% static 'AppCoder/js/jquery.js' %}"></script>
+        <script src="{% static 'AppCoder/js/scripts.js' %}"></script>
+        <script src="{% static 'AppCoder/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'AppCoder/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'AppCoder/js/smoothscroll.js' %}"></script>
+        <script src="{% static 'AppCoder/js/custom.js' %}"></script>
+
+    </body>
+    
+</html>
+

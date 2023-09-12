@@ -1,0 +1,15 @@
+{% extends "AppCoder/padre.html" %}
+
+
+{% block ContenidoVariable %}
+
+{{ nombre }}
+<h1>Borrar Citas: {{cita.cita}}</h1>
+
+<p>Estás seguro que deseas borrar la cita: <strong>{{cita.cita}}</strong> - fecha_tomada: <strong>{{ cita.fecha_tomada }}</strong>?</p>
+<form action="" method="POST">
+    {% csrf_token %}
+    <input type="submit" value="Eliminar">
+</form>
+
+{% endblock ContenidoVariable %}
