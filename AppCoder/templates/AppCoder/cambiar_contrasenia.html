@@ -1,6 +1,6 @@
 {% extends 'AppCoder/padre.html' %}
 
-{% block ContenidoVariable %}
+{% block ContenidoVariable%}
 
 <!DOCTYPE html>
  <html lang="en">
@@ -9,14 +9,16 @@
      <meta charset="utf-8">
      <meta http-equiv="X-UA-Compatible" content="IE=edge">
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>Formulario de Turnos</title>
+     <title>Editar usuario</title>
  </head>
 
+<h2>Editar usuario</h2>
+
  <body style="background-color: palevioletred;">
-     <form action="/AppCoder/citas/" method="POST">
+     <form action="/AppCoder/editar-usuario" method="POST">
          {% csrf_token %}
          {{ form.as_p }}
-         <input type="submit" value="Crear">
+         <input type="submit" value="Iniciar sesión">
      </form>
  </body>
 

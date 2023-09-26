@@ -1,0 +1,26 @@
+{% extends 'AppCoder/padre.html' %}
+
+{% block ContenidoVariable%}
+
+<!DOCTYPE html>
+ <html lang="en">
+
+ <head>
+     <meta charset="utf-8">
+     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Login</title>
+ </head>
+
+<h2>Login</h2>
+
+ <body style="background-color: #20c997; color: #000">
+     <form action="/AppCoder/login" method="POST">
+         {% csrf_token %}
+         {{ form.as_p }}
+         <input style="color: #000" type="submit" value="Iniciar sesión">
+     </form>
+ </body>
+
+ </html>
+{% endblock ContenidoVariable%}

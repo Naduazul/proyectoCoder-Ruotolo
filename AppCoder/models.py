@@ -2,40 +2,18 @@ from django.db import models
 
 # Create your models here.
 
-class inicio (models.Model):
+class Curso(models.Model):
+    curso = models.CharField(max_length=100)
+    comision = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.curso} ({self.comision})"
+
+class Profesor(models.Model):
     nombre = models.CharField(max_length=50)
-    codigo = models.IntegerField()
+    apellido = models.CharField(max_length=50)
+    email = models.EmailField(max_length=50)
+    profesion = models.CharField(max_length=50)
 
-class especialidad (models.Model):
-    nombre = models.CharField(max_length=50)
-    codigo = models.IntegerField()
-    
-class pacientes (models.Model):
-    nombre = models.CharField(max_length= 35)
-    apellido = models.CharField(max_length= 20)
-    dni= models.IntegerField()  
-    
-class Profesionales (models.Model):
-    nombre = models.CharField(max_length= 35)
-    apellido = models.CharField(max_length= 20)
-    cargo = models.CharField(max_length=15)
-    email = models.EmailField(max_length=20)
-    
-def __str__(self):
-        return f"{self.nombre} {self.apellido}"   
-    
-class Citas (models.Model):
-    fecha = models.DateTimeField()
-    turno_tomado = models.BooleanField()
-    
-def __str__(self):
-        return f"{self.fecha} ({self.turno_tomado})"
-    
-class citas_Formulario (models.Model):
-    nombre = models.DateTimeField()
-    codigo = models.BooleanField()   
-    
-
-
-
-    
+    def __str__(self):
+        return f"{self.nombre} {self.apellido}"

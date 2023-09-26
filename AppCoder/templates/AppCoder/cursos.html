@@ -1,0 +1,22 @@
+{% extends 'AppCoder/padre.html' %}
+
+
+{% block ContenidoVariable %}
+
+<h4 style="background-color: #20c997">Este es el contenido de Cursos!</h4>
+
+{{ nombre }}
+
+<br>
+
+{% for comision in comisiones %}
+
+    {% if comision == 1003 %}
+        <h2>{{comision}}</h2>
+    {% else %}
+        <h4>{{comision}}</h4>
+    {% endif %}
+{% endfor %}
+
+
+{% endblock ContenidoVariable %}

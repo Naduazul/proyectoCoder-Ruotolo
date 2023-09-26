@@ -4,9 +4,9 @@
 {% block ContenidoVariable %}
 
 {{ nombre }}
-<h1>Borrar Citas: {{cita.cita}}</h1>
+<h1>Borrar Curso: {{curso.curso}}</h1>
 
-<p>Estás seguro que deseas borrar la cita: <strong>{{cita.cita}}</strong> - fecha_tomada: <strong>{{ cita.fecha_tomada }}</strong>?</p>
+<p>Estás seguro que deseas borrar este curso: <strong>{{curso.curso}}</strong> - comision: <strong>{{ curso.comision }}</strong>?</p>
 <form action="" method="POST">
     {% csrf_token %}
     <input type="submit" value="Eliminar">

@@ -1,59 +1,56 @@
-
-from django.urls import path
-from django.http import HttpResponse
-from AppCoder import views
 from django.contrib import admin
-from .views import *
 from django.urls import path
 
 from .views import (
-    citas,
+    cursos,
     inicio,
-    citas_crud_read_view,
-    profesionales,
-    profesionales_crud_read_view,
-    profesionales_crud_delete_view,
-    profesionales_crud_update_view,
+    cursos_crud_read_view,
+    profesor,
+    profesores_crud_read_view,
+    profesores_crud_delete_view,
+    profesores_crud_update_view,
     # CBV
-    citasCreateView,
-    citasDetail,
-    citasDeleteView,
-    citasListView,
-    citasUpdateView
+    CursoCreateView,
+    CursoDetail,
+    CursoDeleteView,
+    CursoListView,
+    CursoUpdateView,
+    # Login
+    login_view,
+    editar_usuario_view,
+    registro_view,
+    CambiarContrasenia
 )
+
+from django.contrib.auth.views import LogoutView
 
 
 urlpatterns = [
-    path("inicio/", views.inicio, name="inicio"),
-    path('citas_Formulario/', views.citas_Formulario, name='citas_Formulario'),
-    path('citas/', views.citas, name='citas'),
-    path('especialidad/', views.especialidad, name='especialidad'),
-    path('pacientes/', views.pacientes, name='pacientes'),
-    path('profesionales/', views.profesionales, name='profesionales'),
-    path("citas-lista/", citas_crud_read_view),
-    path("profesionales/", profesionales),
-    path("profesionales-lista/", profesionales_crud_read_view),
-    path("profesionales-eliminar/<profesional_email>/", profesionales_crud_delete_view),
-    path("profesionales-editar/<profesional_email>/", profesionales_crud_update_view),
-    
+    path("", inicio),
+    path("inicio/", inicio),
+    path("cursos/", cursos),
+    path("cursos_lista/", cursos_crud_read_view),
+    path("profesores/", profesor),
+    path("profesores_lista/", profesores_crud_read_view),
+    path("profesores-eliminar/<profesor_email>/", profesores_crud_delete_view),
+    path("profesores-editar/<profesor_email>/", profesores_crud_update_view),
 
     ### CBV
 
-    path("citas/list", citasListView.as_view(), name="citas-list"),
-    path("citas/new", citasCreateView.as_view(), name="citas-create"),
-    path("citas/<pk>", citasDetail.as_view(), name="citas-detail"),
-    path("citas/<pk>/update", citasUpdateView.as_view(), name="citas-update"),
-    path("citas/<pk>/delete", citasDeleteView.as_view(), name="citas-delete"),
+    path("curso/list", CursoListView.as_view(), name="curso-list"),
+    path("curso/new", CursoCreateView.as_view(), name="curso-create"),
+    path("curso/<pk>", CursoDetail.as_view(), name="curso-detail"),
+    path("curso/<pk>/update", CursoUpdateView.as_view(), name="curso-update"),
+    path("curso/<pk>/delete", CursoDeleteView.as_view(), name="curso-delete"),
 
-    
-    ]
-    
+    ### Login / Logout
+    path("registro", registro_view, name="registro"),
+    path("login", login_view, name="login"),
 
+    path("logout", LogoutView.as_view(template_name="AppCoder/logout.html"), name="logout"),
 
+    # Edicion de usuario
+    path("editar-usuario", editar_usuario_view, name="editar-usuario"),
+    # path("cambiar-contrasenia", CambiarContrasenia.as_view(), name="cambiar-contrasenia")
 
-
-
-    
-
-
-
+]
